@@ -9,7 +9,7 @@ angular.module('auth.factory', [])
 			var defer = $q.defer();
 			
 			User.login({
-				username: username,
+				email: username,
 				password: password,
 				ttl: SERVER.ttl
 			}).$promise
@@ -113,7 +113,12 @@ angular.module('auth.factory', [])
 		
 		function create( name, email, idProvider, token ) {
 			var defer = $q.defer();
-			User.register(name, email, idProvider, token).$promise
+			User.register({
+				name: name,
+				email: email,
+				idProvider: idProvider,
+				token: token
+			}).$promise
 				.then(res => {
 					defer.resolve(res);
 				})

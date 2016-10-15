@@ -25,65 +25,70 @@ function EventosController( $scope, Activity, $toast, $stateParams, $cordovaStat
 			title: 'Recomendados',
 			icon: 'ion-star',
 			clase: 'bar-eventos-red',
-			color: '#CB2402'
+			color: '#CB2403',
+			verbo: ''
 		},
 		ver: {
 			title: 'Ver',
 			icon: 'ion-eye',
 			clase: 'bar-eventos-darken',
-			color: '#35235D'
+			color: '#981b02',
+			verbo: 'ver'
 		},
 		escuchar: {
 			title: 'Escuchar',
 			icon: 'ion-headphone',
 			clase: 'bar-eventos-green',
-			color: '#B8DC3C'
+			color: '#3c397f',
+			verbo: 'escuchar'
 		},
 		apreciar: {
 			title: 'Apreciar',
 			icon: 'ion-image',
 			clase: 'bar-eventos-blue',
-			color: '#4C49A2'
+			color: '#35235D',
+			verbo: 'vivir'
 		},
 		moverme: {
 			title: 'Moverme',
 			icon: 'ion-map',
 			clase: 'bar-eventos-purple',
-			color: '#A31A48'
+			color: '#DB2464',
+			verbo: 'aire libre'
 		},
 		descubrir: {
 			title: 'Descubrir',
 			icon: 'ion-compass',
 			clase: 'bar-eventos-pink',
-			color: '#DB2464'
+			color: '#af1d50',
+			verbo: 'aire libre'
 		},
 		comer: {
 			title: 'Comer',
 			icon: 'ion-pizza',
 			clase: 'bar-eventos-orange',
-			color: '#E8B143'
+			color: '#dd9c1b',
+			verbo: 'comer'
 		},
 		noche: {
 			title: 'Vida nocturna',
 			icon: 'ion-beer',
 			clase: 'bar-eventos-dark',
-			color: '#3B3B47'
+			color: '#E8B143',
+			verbo: 'vida nocturna'
 		}
 	};
 	
 	function findActivities() {
 		vm.loading = true;
-		$request('Activity', 'find', {
-			filter: {
-				order: 'startDate DESC',
-				include: ['place', 'tickets']
-			}
+		$request('Type', 'getFilteredActivities', {
+			type: vm.category.verbo
 		})
-			.then(() => {
+			.then(( res ) => {
 				vm.loading = false;
+				vm.activities = res.activities;
 			}, null, res => {
-				vm.activities = res;
-				$log.debug(res);
+				vm.activities = res.activities;
 			})
 			.catch(err => {
 				$log.debug(err);
@@ -97,8 +102,9 @@ function EventosController( $scope, Activity, $toast, $stateParams, $cordovaStat
 	
 	$scope.$on('$stateChangeSuccess', ( ev, state ) => {
 		if(state.name === 'app.eventos'){
-			findActivities();
+			vm.activities = [];
 			vm.category = categories[$stateParams.id];
+			findActivities();
 			try{
 				$cordovaStatusbar.styleHex(vm.category.color);
 			} catch(e){

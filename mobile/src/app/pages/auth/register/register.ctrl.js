@@ -3,7 +3,7 @@
 angular.module('register.page')
 	.controller('RegisterController', RegisterController);
 
-function RegisterController( $auth, $facebook, $state, $ionicBackdrop, $ionicLoading, $toast, $filter, $timeout ) {
+function RegisterController( $auth, $facebook, $state, $ionicBackdrop, $ionicLoading, $toast, $filter, $timeout, $log ) {
 	var vm = this;
 	
 	vm.register = {
@@ -51,16 +51,18 @@ function RegisterController( $auth, $facebook, $state, $ionicBackdrop, $ionicLoa
 			$ionicBackdrop.retain();
 			$facebook.login()
 				.then(function( me ) {
-					$auth.register(me.name, me.email, me.id, me.authResponse.access_token)
+					$auth.register(me.name, me.email, me.id, me.authResponse.accessToken)
 						.then(function() {
 							// $calendar.updateAll();
 						})
 						.finally(function() {
 							vm.loading = false;
+							$ionicBackdrop.release();
 						});
 				})
 				.catch(function() {
 					vm.loading = false;
+					$ionicBackdrop.release();
 				});
 		}
 	}

@@ -28,7 +28,7 @@ angular.module('app')
 	
 	.config($facebookProvider => {
 		$facebookProvider.setPermission(
-			['email', 'user_about_me', 'user_likes', 'user_location']
+			['email', 'user_about_me', 'user_likes', 'user_location', 'user_tagged_places']
 		);
 	})
 	
