@@ -1,0 +1,34 @@
+{
+  "name": "typeCategory",
+  "plural": "typeCategories",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "typeId": {
+      "type": "string",
+      "required": false
+    },
+    "categoryId": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "type": {
+      "model": "type",
+      "type": "belongsTo",
+      "foreignKey": "typeId"
+    },
+    "category": {
+      "model": "category",
+      "type": "belongsTo",
+      "foreignKey": "categoryId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

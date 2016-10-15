@@ -1,0 +1,63 @@
+<ion-view view-title="{{ 'LOGIN.TITLE' | translate }}" class="login" hide-nav-bar="true">
+	<ion-content>
+		<ion-item class="item-borderless item-transparent logo">
+			<img src="assets/logo.png"/>
+		</ion-item>
+		<div class="card card-clear">
+			<ion-item class="item-divider">
+			</ion-item>
+			<ion-slide-box>
+				<ion-slide>
+					<div class="box positive text-center">
+						<div class="big-home"><i class="icon ion-qr-scanner"></i></div>
+						<p>Si no sabes que hacer, te recomendamos lo mejor para ti</p>
+					</div>
+					<br><br>
+				</ion-slide>
+				<ion-slide>
+					<div class="box assertive text-center">
+						<div class="big-home"><i class="icon ion-heart"></i></div>
+						<p>
+							Tus interes, tus lugares
+						</p></div>
+					<br><br>
+				</ion-slide>
+				<ion-slide>
+					<div class="box balanced text-center">
+						<div class="big-home"><i class="icon ion-coffee"></i></div>
+						<p>
+							Divierte desfrutando lo que te gusta
+						</p></div>
+					<br><br>
+				</ion-slide>
+			</ion-slide-box>
+			<form name="loginForm" ng-if="false">
+				<ion-item class="item-input">
+					<input name="email" type="email" placeholder="{{ 'LOGIN.PLACEHOLDER.EMAIL' | translate }}"
+					       required ng-model="vm.login.email"/>
+				</ion-item>
+				<ion-item class="item-input">
+					<input name="password" type="password" placeholder="{{ 'LOGIN.PLACEHOLDER.PASSWORD' | translate }}"
+					       minlength="4" required ng-model="vm.login.password"/>
+				</ion-item>
+				<ion-item class="row-no-padding text-right">
+					<button class="button button-clear button-positive button-small" ui-sref="auth.recovery">{{ 'LOGIN.RECOVERY' | translate }}</button>
+				</ion-item>
+				<ion-item class="item-divider">
+					<button class="button button-positive button-block" ng-disabled="loginForm.$invalid"
+					        ng-click="vm.actions.login()" translate>LOGIN.ACTION
+					</button>
+				</ion-item>
+			</form>
+			<ion-item class="item-divider">
+				<button class="button button-positive button-facebook button-block icon-left ion-social-facebook"
+				        ng-click="vm.actions.loginFacebook()" translate>LOGIN.FACEBOOK
+				</button>
+			</ion-item>
+			<ion-item class="item-divider">
+				<button class="button button-positive button-block" ui-sref="auth.register" translate>REGISTER.TITLE
+				</button>
+			</ion-item>
+		</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,28 @@
+{
+  "name": "type",
+  "plural": "types",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": false,
+      "index": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "categories": {
+      "type": "hasMany",
+      "model": "category",
+      "foreignKey": "typeId",
+      "through": "typeCategory",
+      "keyThrough": "categoryId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

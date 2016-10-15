@@ -1,0 +1,79 @@
+<ion-view view-title="{{ 'REGISTER.TITLE' | translate }}" class="login">
+	<ion-nav-bar class="bar-positive">
+		<ion-nav-back-button class="button-clear">
+			<i class="ion-chevron-left"></i>
+			Volver
+		</ion-nav-back-button>
+	</ion-nav-bar>
+	<ion-content>
+		<div class="card card-clear">
+			<ion-item class="item-divider"></ion-item>
+			<ion-slide-box>
+				<ion-slide>
+					<div class="box positive text-center">
+						<div class="big-home"><i class="icon ion-qr-scanner"></i></div>
+						<p>Si no sabes que hacer, te recomendamos lo mejor para ti</p>
+					</div>
+					<br><br>
+				</ion-slide>
+				<ion-slide>
+					<div class="box assertive text-center">
+						<div class="big-home"><i class="icon ion-heart"></i></div>
+						<p>
+							Tus interes, tus lugares
+						</p></div>
+					<br><br>
+				</ion-slide>
+				<ion-slide>
+					<div class="box balanced text-center">
+						<div class="big-home"><i class="icon ion-coffee"></i></div>
+						<p>
+							Divierte desfrutando lo que te gusta
+						</p></div>
+					<br><br>
+				</ion-slide>
+			</ion-slide-box>
+			<form name="registerForm" ng-if="false">
+				<ion-item class="item-input">
+					<input name="name" type="text" placeholder="{{ 'REGISTER.PLACEHOLDER.NAME' | translate }}"
+					       ng-model="vm.register.name" required/>
+				</ion-item>
+				<ion-item class="item-input">
+					<input name="email" type="email" placeholder="{{ 'REGISTER.PLACEHOLDER.EMAIL' | translate }}"
+					       ng-model="vm.register.email" required/>
+				</ion-item>
+				<ion-item class="item-input">
+					<input name="password" type="password" placeholder="{{ 'REGISTER.PLACEHOLDER.PASSWORD' | translate }}"
+					       ng-model="vm.register.password" required/>
+				</ion-item>
+				<ion-item class="item-input">
+					<input type="password" placeholder="{{ 'REGISTER.PLACEHOLDER.REPEAT_PASSWORD' | translate }}"
+					       ng-model="vm.register.repeatPassword" required/>
+				</ion-item>
+				<ion-item class="item-input">
+					<input type="date" date-picker ng-model="vm.register.datepicker" format="dd-MM-yyyy" />
+				</ion-item>
+				<ion-item class="item-input item-select">
+					<div class="input-label">
+						Género
+					</div>
+					<select ng-model="vm.register.genero">
+						<option>Masculino</option>
+						<option>Femenino</option>
+					</select>
+				</ion-item>
+				<ion-item class="item-divider">
+					<button class="button button-positive button-block"
+					        ng-disabled="registerForm.$invalid || vm.register.password != vm.register.repeatPassword"
+					        ng-click="vm.actions.register()" translate>REGISTER.ACTION
+					</button>
+				</ion-item>
+			</form>
+			<ion-item class="item-divider">
+				<button class="button button-positive button-facebook button-block icon-left ion-social-facebook"
+				        ng-click="vm.actions.registerFacebook()" translate>REGISTER.FACEBOOK
+				</button>
+			</ion-item>
+		</div>
+	</ion-content>
+</ion-view>

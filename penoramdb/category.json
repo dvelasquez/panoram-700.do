@@ -1,0 +1,79 @@
+{"_id":{"$oid":"58017217d132560c3c909644"},"name":"Restaurante","type":["comida"]}
+{"_id":{"$oid":"58017221d132560c3c909645"},"name":"Restaurante Mexicano","type":["comida"]}
+{"_id":{"$oid":"58017226d132560c3c909646"},"name":"Restaurante Chileno","type":["comida"]}
+{"_id":{"$oid":"5801722bd132560c3c909647"},"name":"Restaurante Chino","type":["comida"]}
+{"_id":{"$oid":"58017274d132560c3c90964a"},"name":"Museos","type":["ver"]}
+{"_id":{"$oid":"58017281d132560c3c90964b"},"name":"Zoologicos","type":["ver","aire libre"]}
+{"_id":{"$oid":"5801728bd132560c3c90964c"},"name":"Cerro","type":["ver","aire libre"]}
+{"_id":{"$oid":"580172c7d132560c3c90964d"},"name":"Teatro","type":["ver","escuchar"]}
+{"_id":{"$oid":"580172ced132560c3c90964e"},"name":"Sala de Arte","type":["ver"]}
+{"_id":{"$oid":"580172ecd132560c3c90964f"},"name":"Auditorio","type":["ver","escuchar"]}
+{"_id":{"$oid":"580172f1d132560c3c909650"},"name":"Anfiteatro","type":["ver","escuchar"]}
+{"_id":{"$oid":"58017394d132560c3c909651"},"name":"Cine","type":["ver"]}
+{"_id":{"$oid":"58017396d132560c3c909652"},"name":"Cine Arte","type":["ver"]}
+{"_id":{"$oid":"58017a9dd132560c3c909653"},"name":"Cafe","type":["ver"]}
+{"_id":{"$oid":"58017d2820589e16b80c80a5"},"name":"Recitales","type":["escuchar","ver"]}
+{"_id":{"$oid":"58017d2b20589e16b80c80a6"},"name":"Conciertos","type":["escuchar","ver"]}
+{"_id":{"$oid":"58021bd74a444329b421373d"},"name":"Conocimiento","type":["ver","escuchar","aire libre"]}
+{"_id":{"$oid":"58021bd74a444329b421373e"},"name":"Experiencia","type":["ver","escuchar","aire libre"]}
+{"_id":{"$oid":"58021bd74a444329b421373f"},"name":"Cabaré","type":["ver","escuchar"]}
+{"_id":{"$oid":"58021bd74a444329b4213740"},"name":"Cafetería","type":["comer"]}
+{"_id":{"$oid":"58021bd74a444329b4213741"},"name":"Arte","type":["ver","vivir"]}
+{"_id":{"$oid":"58021bd74a444329b4213742"},"name":"Teoría de la justificación","type":["ver"]}
+{"_id":{"$oid":"58021bd74a444329b4213743"},"name":"Ciencia","type":["ver","escuchar","vivir"]}
+{"_id":{"$oid":"58021bd74a444329b4213744"},"name":"Esencia","type":["vivir"]}
+{"_id":{"$oid":"58021bd74a444329b4213745"},"name":"Pub","type":["ver","escuchar","comer"]}
+{"_id":{"$oid":"58021bd74a444329b4213746"},"name":"Servicio de mesa","type":["comer"]}
+{"_id":{"$oid":"58021bd74a444329b4213747"},"name":"Tapa","type":["comer"]}
+{"_id":{"$oid":"58021bd74a444329b4213748"},"name":"Vida nocturna","type":["ver","escuchar"]}
+{"_id":{"$oid":"58021bd74a444329b4213749"},"name":"Bar","type":["comer"]}
+{"_id":{"$oid":"58021bd74a444329b421374a"},"name":"Gastronomía de Francia","type":["comer"]}
+{"_id":{"$oid":"58021bd74a444329b421374b"},"name":"Gastronomía de España","type":["comer"]}
+{"_id":{"$oid":"58021bd74a444329b421374c"},"name":"Sujeto","type":["vivir"]}
+{"_id":{"$oid":"58021bd74a444329b421374d"},"name":"Caída libre","type":["vivir","aire libre"]}
+{"_id":{"$oid":"58021bd74a444329b421374e"},"name":"Minuto","type":["vivir"]}
+{"_id":{"$oid":"58021bd74a444329b421374f"},"name":"Paracaídas","type":["vivir","aire libre"]}
+{"_id":{"$oid":"58021bd74a444329b4213750"},"name":"Paracaidismo","type":["vivir","aire libre"]}
+{"_id":{"$oid":"58021bd74a444329b4213751"},"name":"Cama elástica","type":["vivir","aire libre"]}
+{"_id":{"$oid":"58021bd74a444329b4213752"},"name":"Kilómetro por hora","type":["vivir","aire libre"]}
+{"_id":{"$oid":"58021bd74a444329b4213753"},"name":"Salto BASE","type":["vivir","aire libre"]}
+{"_id":{"$oid":"58021bd74a444329b4213754"},"name":"Caída libre","type":["vivir","aire libre"]}
+{"_id":{"$oid":"58021bd74a444329b4213755"},"name":"Deporte","type":["vivir","aire libre"]}
+{"_id":{"$oid":"58021bd74a444329b4213756"},"name":"Viernes","type":["vivir","aire libre","ver","escuchar"]}
+{"_id":{"$oid":"58021bd74a444329b4213757"},"name":"Velocidad límite","type":["vivir","aire libre"]}
+{"_id":{"$oid":"58021bd74a444329b4213758"},"name":"Gafas","type":["vivir","aire libre"]}
+{"_id":{"$oid":"58021bd74a444329b4213759"},"name":"Domingo","type":["vivir","aire libre","ver","escuchar"]}
+{"_id":{"$oid":"58021bd74a444329b421375a"},"name":"Sábado","type":["vivir","aire libre","ver","escuchar"]}
+{"_id":{"$oid":"58021bd74a444329b421375b"},"name":"Felix Baumgartner","type":["vivir","aire libre"]}
+{"_id":{"$oid":"58021bd74a444329b421375c"},"name":"Diversión","type":["vivir","aire libre","ver","escuchar"]}
+{"_id":{"$oid":"58021bd74a444329b421375d"},"name":"Pub grub","type":["comer","ver","escuchar"]}
+{"_id":{"$oid":"58021bd74a444329b421375e"},"name":"Irlanda","type":["vivir"]}
+{"_id":{"$oid":"58021bd74a444329b421375f"},"name":"Establecimiento comercial","type":["vivir","aire libre"]}
+{"_id":{"$oid":"58021bd74a444329b4213760"},"name":"Historia de la cerveza","type":["vivir","comer"]}
+{"_id":{"$oid":"5802445e51e673324e2df839"},"name":"Francia","type":[" "]}
+{"_id":{"$oid":"5802445e51e673324e2df83a"},"name":"Metro de Santiago","type":[" "]}
+{"_id":{"$oid":"5802445e51e673324e2df83b"},"name":"Zanjón de la Aguada","type":[" "]}
+{"_id":{"$oid":"5802445e51e673324e2df83c"},"name":"Parque O'Higgins","type":[" "]}
+{"_id":{"$oid":"5802445e51e673324e2df83d"},"name":"Luis Cousiño","type":[" "]}
+{"_id":{"$oid":"5802445e51e673324e2df83e"},"name":"Film","type":[" "]}
+{"_id":{"$oid":"5802445e51e673324e2df83f"},"name":"Movie theater","type":[" "]}
+{"_id":{"$oid":"5802445e51e673324e2df840"},"name":"Film","type":[" "]}
+{"_id":{"$oid":"5802445e51e673324e2df841"},"name":"Movie theater","type":[" "]}
+{"_id":{"$oid":"5802445e51e673324e2df842"},"name":"Centro comercial","type":[" "]}
+{"_id":{"$oid":"5802445f51e673324e2df843"},"name":"Tienda","type":[" "]}
+{"_id":{"$oid":"5802445f51e673324e2df844"},"name":"Tienda de ultramarinos","type":[" "]}
+{"_id":{"$oid":"5802445f51e673324e2df845"},"name":"Servicio","type":[" "]}
+{"_id":{"$oid":"5802445f51e673324e2df846"},"name":"Bebida","type":[" "]}
+{"_id":{"$oid":"5802445f51e673324e2df847"},"name":"Comida para llevar","type":[" "]}
+{"_id":{"$oid":"5802445f51e673324e2df848"},"name":"Cerro Santa Lucía","type":[" "]}
+{"_id":{"$oid":"5802445f51e673324e2df849"},"name":"Avenida Libertador General Bernardo O'Higgins","type":[" "]}
+{"_id":{"$oid":"5802445f51e673324e2df84a"},"name":"Pedro de Valdivia","type":[" "]}
+{"_id":{"$oid":"5802445f51e673324e2df84b"},"name":"13 de diciembre","type":[" "]}
+{"_id":{"$oid":"5802445f51e673324e2df84c"},"name":"Parque urbano","type":[" "]}
+{"_id":{"$oid":"5802445f51e673324e2df84d"},"name":"Bernardo O'Higgins","type":[" "]}
+{"_id":{"$oid":"5802445f51e673324e2df84e"},"name":"Pueblo mapuche","type":[" "]}
+{"_id":{"$oid":"5802445f51e673324e2df84f"},"name":"Clínica","type":[" "]}
+{"_id":{"$oid":"5802445f51e673324e2df850"},"name":"Administración en salud","type":[" "]}
+{"_id":{"$oid":"5802445f51e673324e2df851"},"name":"Historia natural de la enfermedad","type":[" "]}
+{"_id":{"$oid":"5802445f51e673324e2df852"},"name":"Diagnóstico médico","type":[" "]}
+{"_id":{"$oid":"5802445f51e673324e2df853"},"name":"Historia clínica","type":[" "]}

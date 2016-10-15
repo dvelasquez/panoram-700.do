@@ -1,0 +1,6 @@
+.loading {
+	@include position(absolute);
+	z-index: 1000;
+	top: .3rem;
+	right: 10px;
+}

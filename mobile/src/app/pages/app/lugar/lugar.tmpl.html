@@ -1,0 +1,21 @@
+<ion-view view-title="Información de lugar">
+	<ion-nav-bar class="bar-positive">
+		<ion-nav-back-button class="button-clear"><i class="ion-chevron-left"></i> Volver</ion-nav-back-button>
+	</ion-nav-bar>
+	<ion-content>
+		<ion-item class="item-image">
+			<img src="assets/santiago.jpg" alt="">
+		</ion-item>
+		<ion-item class="item-borderless">
+			<h2><b>{{ vm.lugar.name || 'Sin nombre' }}</b></h2>
+			<h2>{{ vm.lugar.horario || 'Sin horario' }}</h2>
+			<br>
+			<p>Dirección: </p>
+			<h2>{{ vm.lugar.address }}</h2>
+		</ion-item>
+		<ion-item class="item-divider">Galería</ion-item>
+		<ion-item class="item-borderless text-center">
+			<i class="icon ion-images"></i><br> No hay imágenes
+		</ion-item>
+	</ion-content>
+</ion-view>

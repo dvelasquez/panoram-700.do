@@ -1,0 +1,71 @@
+{
+  "name": "activity",
+  "plural": "activities",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "categories": {
+      "type": "any",
+      "required": false,
+      "description": "Categorias a las que pertence esta actividad"
+    },
+    "description": {
+      "type": "string",
+      "required": true,
+      "description": "Descripcion de la actividad/evento"
+    },
+    "endDate": {
+      "type": "date",
+      "required": false,
+      "description": "Fecha de finalizacion del actividad"
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "description": "Nombre de la actividad"
+    },
+    "ownerId": {
+      "type": "string",
+      "required": false,
+      "description": "Propietario de la actividad"
+    },
+    "placeId": {
+      "type": "string",
+      "required": false,
+      "description": "Lugar donde se realizara la actividad"
+    },
+    "startDate": {
+      "type": "date",
+      "required": false,
+      "description": "Fecha de inicio de la actividad"
+    },
+    "tags": {
+      "type": "any",
+      "required": false,
+      "description": "Tags que involucran esta actividad"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "owner": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "ownerId"
+    },
+    "place": {
+      "type": "belongsTo",
+      "model": "place",
+      "foreignKey": "placeId"
+    },
+    "tickets": {
+      "type": "hasMany",
+      "model": "tickets",
+      "foreignKey": "activityId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,17 @@
+<ion-view view-title="Cambiar Contraseña">
+	<ion-content>
+		<ion-item class="item-divider">Ingresa tu contraseña nueva</ion-item>
+		<ion-item class="item-input item-stacked-label">
+			<span class="input-label">Contraseña nueva</span>
+			<input type="password" placeholder="Contraseña nueva" ng-model="vm.password.new">
+		</ion-item>
+		<ion-item class="item-input item-stacked-label">
+			<span class="input-label">Repetir contraseña nueva</span>
+			<input type="password" placeholder="Repetir contraseña nueva" ng-model="vm.password.repeat">
+		</ion-item>
+		<ion-item class="item-text-wrap text-center">
+			<!--<p>Al cambiar contraseña cerraremos la sesión para que ingreses nuevamente</p>-->
+			<button class="button button-block button-positive" ng-click="vm.cambiarPassword()" ng-disabled="vm.password.new !== vm.password.repeat">Cambiar contraseña</button>
+		</ion-item>
+	</ion-content>
+</ion-view>

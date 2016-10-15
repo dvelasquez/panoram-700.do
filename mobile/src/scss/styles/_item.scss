@@ -1,0 +1,20 @@
+.item-transparent {
+	background: transparent !important;
+}
+
+.card {
+	&.card-clear {
+		opacity: .9 !important;
+	}
+}
+.item-image {
+	.button-wrapper {
+		@include position(absolute);
+		padding: $padding-base-horizontal;
+		right: 0;
+		bottom: 0;
+		z-index: 10;
+		width: 100%;
+		text-align: right;
+	}
+}

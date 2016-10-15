@@ -1,0 +1,21 @@
+<ion-modal-view>
+	<ion-header-bar class="bar-balanced">
+		<h1 class="title">Buscar lugar</h1>
+		<div class="buttons buttons-right"><span class="right-buttons"><button class="button button-clear" ng-click="vm.closeModal()">Cerrar</button></span></div>
+	</ion-header-bar>
+	<ion-header-bar class="bar-subheader bar-balanced item-input-inset">
+		<label class="item-input-wrapper">
+			<i class="icon ion-ios-search placeholder-icon"></i>
+			<input type="search" ng-model="filter" placeholder="Buscar...">
+		</label>
+	</ion-header-bar>
+	<ion-content class="has-subheader">
+		<div loading="vm.loading"></div>
+		<ion-list>
+			<ion-item ng-repeat="place in vm.places | filter: filter" ng-click="vm.selectPlace(place)">
+				<h2>{{place.name}}</h2>
+				<p>{{ place.location.city }}, {{ place.location.country }}</p>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-modal-view>

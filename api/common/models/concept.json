@@ -1,0 +1,23 @@
+{
+  "name": "Concept",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "index": {
+      "type": "number",
+      "required": false,
+      "index": false
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

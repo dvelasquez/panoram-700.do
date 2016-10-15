@@ -1,0 +1,19 @@
+<ion-view class="eventos">
+	<ion-nav-bar class="bar-positive bar-eventos" ng-class="vm.category.clase">
+		<ion-nav-back-button class="button-clear"><i class="ion-chevron-left"></i> Volver</ion-nav-back-button>
+		<ion-nav-title><i class='icon' ng-class="vm.category.icon" ></i> {{ vm.category.title }}</ion-nav-title>
+	</ion-nav-bar>
+	<ion-content>
+		<div loading="vm.loading"></div>
+		<ion-list>
+			<ion-item class="item-divider" ng-class="vm.category.clase">Panoramas disponibles</ion-item>
+			<ion-item class="item-thumbnail-left item-text-wrap" ui-sref="app.evento.ver({id: activity.id})" ng-repeat="activity in vm.activities">
+				<img src="assets/event.jpg">
+				<h2>{{ activity.name }}</h2>
+				<p><b>{{ activity.startDate | date: 'HH:mm dd/MM/yyyy' }}</b></p>
+				<p>{{ activity.place.name }}</p>
+				<h2 class="text-right" ng-if="activity.tickets.length > 0">Desde: <b ng-repeat="ticket in activity.tickets">{{ ticket.price | currency:'$':0 }}</b></h2>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

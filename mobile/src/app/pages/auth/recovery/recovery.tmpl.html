@@ -1,0 +1,57 @@
+<ion-view view-title="{{ 'RECOVERY.TITLE' | translate }}" class="login">
+	<ion-nav-bar class="bar-positive">
+		<ion-nav-back-button class="button-clear">
+			<i class="ion-chevron-left"></i>
+			Volver
+		</ion-nav-back-button>
+	</ion-nav-bar>
+	<ion-content>
+		<ion-item class="item-borderless item-transparent logo">
+			<img src="assets/logo.png"/>
+		</ion-item>
+		<div class="card card-clear" ng-if="!vm.result">
+			<form name="recovery">
+				<ion-item class="item-divider">
+					{{ 'RECOVERY.INSTRUCTIONS' | translate }}
+				</ion-item>
+				<ion-item class="item-input">
+					<input name="email" type="email"
+					       placeholder="{{ 'RECOVERY.PLACEHOLDER.EMAIL' | translate }}"
+					       ng-model="vm.recovery.email" required/>
+				</ion-item>
+				<ion-item class="item-divider">
+					<button class="button button-positive button-block"
+					        ng-click="vm.actions.recovery()"
+					        ng-disabled="recovery.$invalid" translate>RECOVERY.ACTION
+					</button>
+				</ion-item>
+			</form>
+		</div>
+		<div class="card card-clear" ng-if="vm.result === 'OK'">
+			<ion-item class="item-divider text-center">
+				<h1 class="icon ion-checkmark-circled balanced"></h1>
+			</ion-item>
+			<ion-item class="item-divider item-text-wrap item-borderless text-center">
+				{{ 'RECOVERY.RESULT.OK' | translate }}
+			</ion-item>
+			<ion-item class="item-divider">
+				<button class="button button-positive button-block"
+				        ng-click="vm.actions.acceptOk()" translate>ACCEPT
+				</button>
+			</ion-item>
+		</div>
+		<div class="card card-clear" ng-if="vm.result === 'ERROR'">
+			<ion-item class="item-divider text-center">
+				<h1 class="icon ion-close-circled assertive"></h1>
+			</ion-item>
+			<ion-item class="item-divider item-text-wrap item-borderless text-center">
+				{{ 'RECOVERY.RESULT.FAILED' | translate }}
+			</ion-item>
+			<ion-item class="item-divider">
+				<button class="button button-positive button-block"
+				        ng-click="vm.actions.acceptCancel()" translate>ACCEPT
+				</button>
+			</ion-item>
+		</div>
+	</ion-content>
+</ion-view>

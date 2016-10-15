@@ -1,0 +1,35 @@
+<ion-modal-view>
+	<ion-header-bar class="bar-balanced">
+		<h1 class="title">Vender entradas</h1>
+		<div class="buttons buttons-right"><span class="right-buttons"><button class="button button-clear" ng-click="vm.closeModalEntrada()">Cerrar</button></span></div>
+	</ion-header-bar>
+	<ion-content>
+		<ion-item class="text-center item-stable item-text-wrap">
+			<div class="row row-no-padding">
+				<div class="col col-offset-25 col-50"><img src="assets/mercadolibre.png" alt=""></div>
+			</div>
+			<p>Debes tener cuenta de MercadoLibre para poder publicar tus entradas</p>
+		</ion-item>
+		<ng-form name="EntradaForm">
+			<ion-item class="item-input item-stacked-label">
+				<span class="input-label">Título</span>
+				<input name="title" type="text" ng-model="vm.entrada.title" required/>
+			</ion-item>
+			<ion-item class="item-input item-stacked-label">
+				<span class="input-label">Descripción</span>
+				<textarea name="description" ng-model="vm.entrada.description" required></textarea>
+			</ion-item>
+			<ion-item class="item-input">
+				<span class="input-label">Cantidad</span>
+				<input name="quantity" type="number" ng-model="vm.entrada.available_quantity" class="text-right" required/>
+			</ion-item>
+			<ion-item class="item-input">
+				<span class="input-label">Precio (CLP)</span>
+				<input name="value" type="number" ng-model="vm.entrada.price" class="text-right" required/>
+			</ion-item>
+			<ion-item>
+				<button class="button button-block button-positive" ng-disabled="EntradaForm.$invalid || parseInt(vm.entrada.price) <= 0 || parseInt(vm.entrada.available_quantity) <= 0" ng-click="vm.saveEntrada()">Poner en venta</button>
+			</ion-item>
+		</ng-form>
+	</ion-content>
+</ion-modal-view>

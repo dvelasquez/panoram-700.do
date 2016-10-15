@@ -1,0 +1,39 @@
+<ion-view view-title="Evento">
+	<ion-nav-bar class="bar-positive">
+		<ion-nav-back-button class="button-clear"><i class="ion-chevron-left"></i> Volver</ion-nav-back-button>
+	</ion-nav-bar>
+	<ion-content class="has-footer">
+		<div loading="vm.loading"></div>
+		<ion-item class="item-image">
+			<img src="assets/event.jpg" alt="">
+			<div class="button-wrapper" ng-if="vm.activity.tickets.length > 0">
+				<button class="button button-light button-outline button-small" ui-sref="app.entradas.comprar"><i class="icon ion-cash"></i> Comprar entradas</button>
+			</div>
+		</ion-item>
+		<ion-item class="item-borderless item-text-wrap">
+			<h2><b>{{ vm.activity.name }}</b></h2>
+			<h2>{{ vm.activity.startDate | date:'dd/MM/yyyy HH:mm' }}</h2>
+			<h2 class="text-right" ng-if="vm.activity.tickets.length > 0" ng-repeat="ticket in vm.activity.tickets">Precio: <b>{{ ticket.price | currency: '$':0 }}</b></h2>
+			<p>{{ vm.activity.description }}</p>
+			<p ng-if="vm.activity.place && vm.activity.place.name">
+				<button class="button button-small button-royal button-outline" ui-sref="app.lugar({id: vm.activity.place.id})">{{ vm.activity.place.name }}</button>
+			</p>
+			<p ng-if="vm.activity.tags"><br>
+				TAGS:
+				<span class="tag tag-view" ng-repeat="tag in vm.activity.tags track by $index">{{ tag }}</span>
+			</p>
+		</ion-item>
+	</ion-content>
+	<div class="">
+		<div class="tabs tabs-icon-top tabs-balanced">
+			<a class="tab-item active" ui-sref="app.evento.mapa">
+				<i class="icon ion-map"></i>
+				¿Como llegar?
+			</a>
+			<a class="tab-item active" ng-click="vm.actions.hacerChecking()">
+				<i class="icon ion-location"></i>
+				Hacer Check-in
+			</a>
+		</div>
+	</div>
+</ion-view>

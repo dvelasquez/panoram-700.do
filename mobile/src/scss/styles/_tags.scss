@@ -1,0 +1,12 @@
+.tag {
+	&.tag-view {
+		@include display(inline-block);
+		background: #4C49A2;
+		color: white;
+		font-size: .7rem;
+		padding: .25rem;
+		border-radius: .75rem !important;
+		margin-right: .5rem;
+		margin-bottom: .25rem;
+	}
+}

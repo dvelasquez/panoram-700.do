@@ -1,0 +1,22 @@
+<ion-modal-view>
+	<ion-header-bar class="bar-balanced">
+		<h1 class="title">Check-in</h1>
+		<div class="buttons buttons-right"><span class="right-buttons"><button class="button button-clear" ng-click="vm.closeModal()">Cerrar</button></span></div>
+	</ion-header-bar>
+	<ion-content>
+		<ion-item>
+			<h2><b>{{ vm.activity.name }}</b></h2>
+		</ion-item>
+		<ion-item class="item-divider">¿Qué te pareció el evento?</ion-item>
+		<ion-item class="text-center">
+			<rating ng-model="vm.comment.rating" max="5"></rating>
+		</ion-item>
+		<ion-item class="item-input item-stacked-label">
+			<div class="input-label">Comentarios</div>
+			<textarea ng-model="vm.comment.text"></textarea>
+		</ion-item>
+		<ion-item class="item-borderless">
+			<button class="button button-positive button-block" ng-click="vm.actions.enviarChecking()">Hacer Check-in</button>
+		</ion-item>
+	</ion-content>
+</ion-modal-view>

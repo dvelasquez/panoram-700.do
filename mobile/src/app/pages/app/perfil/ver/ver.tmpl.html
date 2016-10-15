@@ -1,0 +1,32 @@
+<ion-view view-title="Perfil">
+	<ion-nav-buttons side="right">
+		<button class="button button-clear" ui-sref="app.perfil.editar">Editar</button>
+	</ion-nav-buttons>
+	<ion-content>
+		<ion-list class="list-perfil">
+			<ion-item class="item-image-perfil">
+				<img src="assets/default.png" alt="">
+			</ion-item>
+			<ion-item class="item-info-perfil">
+				<div><p>Nombre</p>
+					<h2>{{ vm.user.name }}</h2></div>
+				<p>Correo electrónico</p>
+				<h2>{{ vm.user.email }}</h2>
+			</ion-item>
+		</ion-list>
+		<ion-list>
+			<ion-item class="item-borderless">
+				<p>Edad</p>
+				<h2>{{ vm.user.edad || 'Sin registro' }}</h2>
+				<p>Dirección</p>
+				<h2>{{ vm.user.direccion || 'Sin registro'  }}</h2>
+				<p>Ciudad</p>
+				<h2>{{ vm.user.ciudad || 'Sin registro'  }}</h2>
+			</ion-item>
+		</ion-list>
+		<ion-item>
+			<button class="button button-block button-positive" ui-sref="app.perfil.contrasena">Cambiar contraseña</button>
+			<button class="button button-block button-assertive" ng-click="vm.actions.cerrarSesion()">Cerrar sesión</button>
+		</ion-item>
+	</ion-content>
+</ion-view>

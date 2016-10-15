@@ -1,0 +1,37 @@
+{
+  "LOGIN": {
+	"TITLE": "Iniciar Sesión",
+	"ACTION": "Iniciar Sesión",
+	"FACEBOOK": "Entrar con Facebook",
+	"TWITTER": "Entrar con Twitter",
+	"RECOVERY": "¿Olvidaste tu contraseña?",
+	"PLACEHOLDER": {
+	  "EMAIL": "Correo electrónico",
+	  "PASSWORD": "Contraseña"
+	}
+  },
+  "REGISTER": {
+	"TITLE": "Registrar",
+	"ACTION": "Completar Registro",
+	"FACEBOOK": "Registrar con Facebook",
+	"PLACEHOLDER": {
+	  "NAME": "Nombre Completo",
+	  "EMAIL": "Correo electrónico",
+	  "PASSWORD": "Contraseña",
+	  "REPEAT_PASSWORD": "Repetir contraseña",
+	  "BIRTHDAY": "Fecha de nacimiento"
+	}
+  },
+  "RECOVERY": {
+	"TITLE": "Recuperar contraseña",
+	"ACTION": "Enviar",
+	"INSTRUCTIONS": "Ingresa tu correo electrónico",
+	"RESULT": {
+	  "OK": "Hemos enviado un correo electrónico con instrucciones para recuperar tu contraseña",
+	  "FAILED": "No hemos encontrado cuenta asociado a este correo electrónico"
+	},
+	"PLACEHOLDER": {
+	  "EMAIL": "Correo electrónico"
+	}
+  }
+}

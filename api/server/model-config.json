@@ -1,0 +1,77 @@
+{
+  "_meta": {
+    "sources": [
+      "../common/models",
+      "./models"
+    ]
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "test": {
+    "dataSource": "mongoIbm",
+    "public": true
+  },
+  "user": {
+    "dataSource": "mongoIbm",
+    "public": true
+  },
+  "Request": {
+    "dataSource": "mongoIbm",
+    "public": true
+  },
+  "place": {
+    "dataSource": "mongoIbm",
+    "public": true
+  },
+  "activity": {
+    "dataSource": "mongoIbm",
+    "public": true
+  },
+  "attendance": {
+    "dataSource": "mongoIbm",
+    "public": true
+  },
+  "tickets": {
+    "dataSource": "mongoIbm",
+    "public": true
+  },
+  "category": {
+    "dataSource": "mongoIbm",
+    "public": true
+  },
+  "Concept": {
+    "dataSource": "mongoIbm",
+    "public": true
+  },
+  "counter": {
+    "dataSource": "mongoIbm",
+    "public": true
+  },
+  "token": {
+    "dataSource": "db",
+    "public": false,
+    "strict": false
+  },
+  "type": {
+    "dataSource": "mongoIbm",
+    "public": true
+  },
+  "typeCategory": {
+    "dataSource": "mongoIbm",
+    "public": true
+  }
+}

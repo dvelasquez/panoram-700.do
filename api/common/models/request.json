@@ -1,0 +1,42 @@
+{
+  "name": "Request",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "endpoint": {
+      "type": "string",
+      "required": false
+    },
+    "header": {
+      "type": "object",
+      "required": false
+    },
+    "host": {
+      "type": "string",
+      "required": false
+    },
+    "ip": {
+      "type": "string",
+      "required": false
+    },
+    "publicacionId": {
+      "type": "string",
+      "required": false
+    },
+    "idProvider": {
+      "type": "string",
+      "required": false
+    },
+    "geoInfo": {
+      "type": "object",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

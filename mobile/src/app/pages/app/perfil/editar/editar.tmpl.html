@@ -1,0 +1,43 @@
+<ion-view view-title="Editar Perfil">
+	<ion-nav-buttons side="right">
+		<button class="button button-clear" ui-sref="app.perfil.editar">Guardar</button>
+	</ion-nav-buttons>
+	<ion-content>
+		<ion-item class="item-image">
+			<img src="assets/default.png" alt="">
+			<div class="button-wrap-list">
+				<button class="button button-small button-positive"><i class="icon ion-camera"></i> Cambiar</button>
+			</div>
+		</ion-item>
+		<ion-item class="item-divider">Datos de usuario</ion-item>
+		<ion-list>
+			<ion-item class="item-input item-stacked-label">
+				<span class="input-label">Nombre</span>
+				<input type="text" placeholder="Nombres">
+			</ion-item>
+			<ion-item class="item-input item-stacked-label">
+				<span class="input-label">Correo electrónico</span>
+				<input type="email" placeholder="Correo electrónico">
+			</ion-item>
+			<ion-item class="item-input item-stacked-label">
+				<span class="input-label">Fecha de nacimiento</span>
+				<input type="email" placeholder="Fecha de nacimiento">
+			</ion-item>
+			<ion-item class="item-input item-select">
+				<div class="input-label">Genero</div>
+				<select>
+					<option>Masculino</option>
+					<option>Femenino</option>
+				</select>
+			</ion-item>
+		</ion-list>
+		<ion-item class="item-divider">Ubicación</ion-item>
+		<ion-item class="item-input item-stacked-label">
+			<span class="input-label">Ciudad</span>
+			<input type="text" placeholder="Ciudad">
+		</ion-item>
+		<ion-item class="item-input item-stacked-label">
+			<span class="input-label">Dirección</span>
+			<input type="text" placeholder="Dirección">
+	</ion-content>
+</ion-view>

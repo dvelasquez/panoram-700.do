@@ -1,0 +1,40 @@
+{
+  "name": "attendance",
+  "plural": "attendances",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "activity": {
+      "type": "string",
+      "required": true,
+      "description": "Actividad a la que asistio un usuario"
+    },
+    "place": {
+      "type": "string",
+      "required": true,
+      "description": "Lugar donde se desarrollo la actividad"
+    },
+    "rating": {
+      "type": "number",
+      "required": false,
+      "description": "Puntaje que el usuario le otorgo a la actividad"
+    },
+    "tips": {
+      "type": "string",
+      "required": false,
+      "description": "Consejos o comentarios que el usuario dejo a esta actividad"
+    },
+    "user": {
+      "type": "string",
+      "required": true,
+      "description": "Usuario que asistio a esta actividad"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,46 @@
+{
+  "name": "tickets",
+  "plural": "tickets",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "activityId": {
+      "type": "string",
+      "required": false,
+      "description": "actividad en la que se vendera este ticket"
+    },
+    "name": {
+      "type": "string",
+      "required": false,
+      "description": "nombre del ticket"
+    },
+    "price": {
+      "type": "number",
+      "required": false,
+      "description": "valor del ticket"
+    },
+    "available": {
+      "type": "number",
+      "required": false,
+      "description": "tickets disponibles"
+    },
+    "total": {
+      "type": "number",
+      "required": false,
+      "description": "tickets vendidos"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "activity": {
+      "type": "belongsTo",
+      "model": "activity",
+      "foreignKey": "activityId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

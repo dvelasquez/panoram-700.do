@@ -1,0 +1,39 @@
+<ion-view view-title="Crear evento">
+	<ion-content>
+		<ng-form name="createEvent">
+			<ion-item class="item-input">
+				<input name="name" type="text" placeholder="Nombre*" ng-model="vm.evento.name" required/>
+			</ion-item>
+			<ion-item class="item-input">
+				<textarea name="description" placeholder="Descripción" ng-model="vm.evento.description"></textarea>
+			</ion-item>
+			<ion-item class="item-input item-stacked-label">
+				<span class="input-label">Fecha de inicio*</span>
+				<input name="startDate" type="date" ng-model="vm.evento.startDate" required/>
+			</ion-item>
+			<ion-item class="item-input item-stacked-label">
+				<span class="input-label">Fecha de fin</span>
+				<input name="endDate" type="date" ng-model="vm.evento.endDate"/>
+			</ion-item>
+			<ion-item class="item-icon-right" ng-click="vm.buscarLugar()">
+				<p ng-if="!vm.place">Lugar*</p>
+				<div ng-if="vm.place">
+					<h2>{{ vm.place.name }}</h2>
+					<p>{{ vm.place.location.city }}</p>
+				</div>
+				<i class="icon ion-chevron-right"></i>
+			</ion-item>
+			<ion-item class="item-button-right">
+				<p ng-if="!vm.entrada.available_quantity || vm.entrada.available_quantity === 0">Sin tickets</p>
+				<p ng-if="vm.entrada.available_quantity > 0">{{ vm.entrada.available_quantity }} tickets</p>
+				<button class="button button-small button-positive" ng-click="vm.publicarEntrada()">Vender entradas</button>
+			</ion-item>
+			<ion-item class="text-center" ng-if="false">
+				<button class="button button-mercadolibre" ng-click="mercadoLibre()">Conectar con MercadoLibre</button>
+			</ion-item>
+			<ion-item>
+				<button class="button button-positive button-block" ng-click="vm.guardarEvento()" ng-disabled="createEvent.$invalid || !vm.place">Crear evento</button>
+			</ion-item>
+		</ng-form>
+	</ion-content>
+</ion-view>

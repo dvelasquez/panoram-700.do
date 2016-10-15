@@ -1,0 +1,33 @@
+.list-perfil {
+	border-bottom: 0 !important;
+	.list {
+		@include display(flex);
+		border-bottom: 0 !important;
+		.item {
+			border: 0 !important;
+		}
+		.item-image-perfil {
+			width: 7rem;
+			@include display(inline-block);
+			border: 0 !important;
+			img {
+				width: 100%;
+			}
+		}
+		.item-info-perfil {
+			@include display(inline-block);
+			@include flex(1);
+			@include padding(null null null 0);
+		}
+	}
+}
+
+.item-image {
+	.button-wrap-list {
+		position: absolute;
+		width: 100%;
+		@include padding(10px);
+		bottom: 0;
+		text-align: right;
+	}
+}

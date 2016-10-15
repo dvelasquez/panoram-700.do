@@ -1,0 +1,107 @@
+{
+  "name": "com.alquimio.panoram",
+  "version": "1.0.0",
+  "description": "Panoram",
+  "dependencies": {
+    "babel-plugin-transform-es2015-arrow-functions": "^6.8.0",
+    "bourbon": "^4.2.7",
+    "bourbon-neat": "^1.8.0",
+    "gulp": "^3.5.6",
+    "gulp-concat": "^2.2.0",
+    "gulp-filter": "^4.0.0",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^2.0.4",
+    "install": "^0.8.1",
+    "npm": "^3.10.6",
+    "react-swiper": "^0.1.5",
+    "require-dir": "^0.3.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "bower": "^1.3.3",
+    "eslint": "^3.2.2",
+    "eslint-config-angular": "^0.5.0",
+    "eslint-plugin-angular": "^1.3.1",
+    "eslint-plugin-react": "^6.0.0",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean": "^0.3.2",
+    "gulp-copy": "0.0.2",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-inject": "^4.1.0",
+    "gulp-json-transform": "^0.4.2",
+    "gulp-minify": "0.0.13",
+    "gulp-order": "^1.1.1",
+    "gulp-util": "^2.2.14",
+    "main-bower-files": "^2.13.1",
+    "ncp": "^2.0.0",
+    "shelljs": "^0.3.0",
+    "stream-series": "^0.1.1"
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-device",
+    "cordova-plugin-console",
+    "cordova-plugin-whitelist",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
+    "ionic-plugin-keyboard",
+    {
+      "locator": "https://github.com/Telerik-Verified-Plugins/NativePageTransitions",
+      "id": "com.telerik.plugins.nativepagetransitions"
+    },
+    {
+      "locator": "https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git",
+      "id": "cordova-plugin-x-toast"
+    },
+    "cordova-plugin-android-permissions",
+    {
+      "locator": "https://github.com/EddyVerbruggen/cordova-plugin-actionsheet.git",
+      "id": "cordova-plugin-actionsheet"
+    },
+    "cordova-plugin-camera",
+    "cordova-plugin-inappbrowser",
+    {
+      "locator": "https://github.com/Paldom/SpinnerDialog.git",
+      "id": "cordova-plugin-spinner-dialog"
+    },
+    {
+      "id": "phonegap-plugin-push",
+      "locator": "phonegap-plugin-push",
+      "variables": {
+        "SENDER_ID": "57822436493"
+      }
+    },
+    "cordova-plugin-compat",
+    "cordova-plugin-webserver",
+    "com.testfairy.cordova-plugin",
+    "cordova-custom-config",
+    "cordova-plugin-file-transfer",
+    "cordova-plugin-file",
+    "cordova-plugin-globalization",
+    {
+      "id": "cordova-plugin-facebook4",
+      "locator": "cordova-plugin-facebook4",
+      "variables": {
+        "APP_ID": "949335795196098",
+        "APP_NAME": "panoram"
+      }
+    }
+  ],
+  "cordovaPlatforms": [
+    "android",
+    "ios",
+    {
+      "platform": "android",
+      "version": "",
+      "locator": "android"
+    },
+    {
+      "platform": "ios",
+      "version": "",
+      "locator": "ios"
+    }
+  ]
+}

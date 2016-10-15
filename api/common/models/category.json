@@ -1,0 +1,33 @@
+{
+  "name": "category",
+  "plural": "categories",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "description": "Nombre de la categoria"
+    },
+    "type": {
+      "type": "any",
+      "required": false,
+      "description": "[array] tipo de clasificacion a la que pertenece (ver, oir, vivir)"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "types":{
+      "type":"hasMany",
+      "model":"type",
+      "foreignKey":"categoryId",
+      "through":"typeCategory",
+      "keyThrough": "typeId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

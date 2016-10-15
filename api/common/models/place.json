@@ -1,0 +1,61 @@
+{
+  "name": "place",
+  "plural": "places",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "address": {
+      "type": "string",
+      "description": "Direccion alfanumerica donde se ubica este lugar"
+    },
+    "categories": {
+      "type": "any",
+      "description": "[array ]Categorias a las que pertenece"
+    },
+    "fbId": {
+      "type": "string",
+      "description": "id facebook del lugar"
+    },
+    "location": {
+      "type": "geopoint",
+      "description": "Ubicacion lat/lng del lugar"
+    },
+    "name": {
+      "type": "string",
+      "description": "Nombre del lugar"
+    },
+    "ownerId": {
+      "type": "string",
+      "description": "Propietario del lugar"
+    },
+    "tags": {
+      "type": "any",
+      "index": true
+    },
+    "profiled": {
+      "type": "boolean"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descripcion del Lugar"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "activities": {
+      "type": "hasMany",
+      "model": "activity",
+      "foreignKey": "placeId"
+    },
+    "owner": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "ownerId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

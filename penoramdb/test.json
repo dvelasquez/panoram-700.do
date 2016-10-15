@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5800fb24c123fa396972dd09"},"name":"test"}
+{"_id":{"$oid":"58010ad426d106583a0be38c"},"created":{"$date":"2016-10-14T00:00:00.000Z"},"name":"test"}

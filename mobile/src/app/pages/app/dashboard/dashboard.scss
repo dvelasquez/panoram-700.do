@@ -1,0 +1,61 @@
+.dashboard {
+	.list-home {
+		.row {
+			vertical-align: top;
+			.col {
+				padding: 1rem;
+				height: 8rem;
+				.icon {
+					font-size: 4rem;
+				}
+				font-size: .8rem;
+				text-align: center;
+				color: white;
+				&.red {
+					background: #CB2402;
+				}
+				&.pink {
+					background: #DB2464;
+				}
+				&.blue {
+					background: #4C49A2;
+				}
+				&.green {
+					background: #B8DC3C;
+				}
+				&.purple {
+					background: #A31A48;
+				}
+				&.darken {
+					background: #35235D;
+				}
+				&.orange {
+					background: #E8B143;
+				}
+				&.dark {
+					background: #3B3B47;
+				}
+			}
+		}
+
+	}
+	ion-side-menu-content {
+		height: 100%;
+		width: 100%;
+		ion-list {
+			height: 100%;
+			display: block;
+			.list {
+				padding: 0 !important;
+				height: 100%;
+				.row {
+					height: 25% !important;
+					margin-top: 0 !important;
+					.col {
+						height: 100% !important;
+					}
+				}
+			}
+		}
+	}
+}

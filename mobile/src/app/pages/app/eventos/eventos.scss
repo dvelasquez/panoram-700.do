@@ -1,0 +1,72 @@
+$red: #CB2402;
+$pink: #DB2464;
+$blue: #4C49A2;
+$green: #B8DC3C;
+$purple: #A31A48;
+$darken: #35235D;
+$orange: #E8B143;
+$dark: #3B3B47;
+
+.eventos {
+	.bar-eventos {
+		@extend .bar-positive;
+		&.bar-eventos-red ion-header-bar {
+			background: $red;
+		}
+		&.bar-eventos-pink ion-header-bar {
+			background: $pink;
+		}
+		&.bar-eventos-blue ion-header-bar {
+			background: $blue;
+		}
+		&.bar-eventos-green ion-header-bar {
+			background: $green;
+		}
+		&.bar-eventos-purple ion-header-bar {
+			background: $purple;
+		}
+		&.bar-eventos-darken ion-header-bar {
+			background: $darken;
+		}
+		&.bar-eventos-orange ion-header-bar {
+			background: $orange;
+		}
+		&.bar-eventos-dark ion-header-bar {
+			background: $dark;
+		}
+	}
+	.item-divider {
+		@extend .item-positive;
+		border: 0;
+		&.bar-eventos-red {
+			background: $red;
+		}
+		&.bar-eventos-pink {
+			background: $pink;
+		}
+		&.bar-eventos-blue {
+			background: $blue;
+		}
+		&.bar-eventos-green {
+			background: $green;
+		}
+		&.bar-eventos-purple {
+			background: $purple;
+		}
+		&.bar-eventos-darken {
+			background: $darken;
+		}
+		&.bar-eventos-orange {
+			background: $orange;
+		}
+		&.bar-eventos-dark {
+			background: $dark;
+		}
+	}
+}
+
+.col {
+	img {
+		max-width: 100%;
+	}
+}
