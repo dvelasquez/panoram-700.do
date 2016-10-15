@@ -14,26 +14,32 @@
 				&.red {
 					background: #CB2402;
 				}
+				&.reddark {
+					background: darken(#CB2402, 10%);
+				}
+				&.blue {
+					background: #35235D;
+				}
+				&.bluedark {
+					background: darken(#4C49A2, 10%);
+				}
 				&.pink {
 					background: #DB2464;
 				}
-				&.blue {
-					background: #4C49A2;
+				&.pinkdark {
+					background: darken(#DB2464, 10%);
 				}
-				&.green {
-					background: #B8DC3C;
+				&.dark {
+					background: #E8B143;
+				}
+				&.darken {
+					background: darken(#E8B143, 10%);
 				}
 				&.purple {
 					background: #A31A48;
 				}
-				&.darken {
-					background: #35235D;
-				}
 				&.orange {
 					background: #E8B143;
-				}
-				&.dark {
-					background: #3B3B47;
 				}
 			}
 		}

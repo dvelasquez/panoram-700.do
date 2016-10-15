@@ -5,7 +5,7 @@
 	</ion-nav-bar>
 	<ion-content>
 		<div loading="vm.loading"></div>
-		<ion-list>
+		<ion-list ng-if="vm.activities.length > 0">
 			<ion-item class="item-divider" ng-class="vm.category.clase">Panoramas disponibles</ion-item>
 			<ion-item class="item-thumbnail-left item-text-wrap" ui-sref="app.evento.ver({id: activity.id})" ng-repeat="activity in vm.activities">
 				<img src="assets/event.jpg">
@@ -13,6 +13,12 @@
 				<p><b>{{ activity.startDate | date: 'HH:mm dd/MM/yyyy' }}</b></p>
 				<p>{{ activity.place.name }}</p>
 				<h2 class="text-right" ng-if="activity.tickets.length > 0">Desde: <b ng-repeat="ticket in activity.tickets">{{ ticket.price | currency:'$':0 }}</b></h2>
+			</ion-item>
+		</ion-list>
+		<ion-list ng-if="vm.activities.length <= 0">
+			<ion-item class="item-divider text-center" ng-class="vm.category.clase">No hay panoramas aún en esta categoría</ion-item>
+			<ion-item>
+				<button class="button button-block button-positive" ui-sref="app.evento.crear">¿Por qué no agregas uno?</button>
 			</ion-item>
 		</ion-list>
 	</ion-content>
